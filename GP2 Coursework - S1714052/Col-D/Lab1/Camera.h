@@ -28,16 +28,6 @@ public:
 		return projection * glm::lookAt(pos, pos + forward, up);
 	}
 
-	void MoveCameraRight(int playerMove)
-	{
-		xMove = playerMove;
-	}
-
-	void MoveCameraUp(int playerMove)
-	{
-		yMove = playerMove;
-	}
-
 protected:
 private:
 	glm::mat4 projection;
@@ -45,10 +35,6 @@ private:
 
 	glm::vec3 forward;
 	glm::vec3 up;
-
-	int playerVelocity;
-	int yMove;
-	int xMove;
 };
 
 

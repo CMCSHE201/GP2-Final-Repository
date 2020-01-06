@@ -151,7 +151,7 @@ void MainGame::playAudio(unsigned int Source, glm::vec3 pos)
 void MainGame::drawGame()
 {
 		//Clears the display
-		_gameDisplay.clearDisplay(0.0f, 0.0f, 0.0f, 1.0f);
+		_gameDisplay.clearDisplay(0.0f, 119.0f, 190.0f, 1.0f);
 
 		Shader shader("..\\res\\shader"); //new shader
 		Texture texture("..\\res\\wood.jpg"); //load texture
