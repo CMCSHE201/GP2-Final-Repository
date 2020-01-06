@@ -39,7 +39,7 @@ void MainGame::initSystems()
 	player.loadModel("..\\res\\Canoe.obj");
 	rock1.loadModel("..\\res\\rock.obj");
 	rock2.loadModel("..\\res\\rock.obj");
-	rock3.loadModel("..\\res\\rock.obj");
+	rock3.loadModel("..\\res\\rock2.obj");
 	
 	//Initialises the camera pos and projection
 	myCamera.initCamera(glm::vec3(0, 0, -5), 70.0f, (float)_gameDisplay.getWidth()/_gameDisplay.getHeight(), 0.01f, 1000.0f);
@@ -240,11 +240,11 @@ void MainGame::drawGame()
 
 			transform.SetPos(glm::vec3(2, 11, 2));
 			transform.SetRot(glm::vec3(0.0, 0, 0));
-			transform.SetScale(glm::vec3(1, 1, 1));
+			transform.SetScale(glm::vec3(0.001, 0.001, 0.001));
 
 			shader.Bind();
 			shader.Update(transform, myCamera);
-			texture.Bind(1);
+			texture.Bind(2);
 			rock3.draw();
 			rock3.updateSphereData(*transform.GetPos(), 0.5f);
 
@@ -310,11 +310,11 @@ void MainGame::drawGame()
 		{
 			transform.SetPos(glm::vec3(rock3.getSpherePos().x, rock3.getSpherePos().y - 0.3, 2));
 			transform.SetRot(glm::vec3(0.0, 0, 0));
-			transform.SetScale(glm::vec3(1, 1, 1));
+			transform.SetScale(glm::vec3(0.001, 0.001, 0.001));
 
 			shader.Bind();
 			shader.Update(transform, myCamera);
-			texture.Bind(1);
+			texture.Bind(2);
 			rock3.draw();
 			rock3.updateSphereData(*transform.GetPos(), 0.5f);
 		}
@@ -324,11 +324,11 @@ void MainGame::drawGame()
 
 			transform.SetPos(glm::vec3(xVal, 5, 2));
 			transform.SetRot(glm::vec3(0.0, 0, 0));
-			transform.SetScale(glm::vec3(1, 1, 1));
+			transform.SetScale(glm::vec3(0.001, 0.001, 0.001));
 
 			shader.Bind();
 			shader.Update(transform, myCamera);
-			texture.Bind(1);
+			texture.Bind(2);
 			rock3.draw();
 			rock3.updateSphereData(*transform.GetPos(), 0.5f);
 		}
